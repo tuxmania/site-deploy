@@ -1,7 +1,7 @@
 appversion: v29.2a-plume
 env: prod
 public: true
-http_host: zestedesavoir.com
+http_host: tuxmania.net
 certificate:
-  cert: /var/lib/acme/live/zestedesavoir.com/fullchain
-  key: /var/lib/acme/live/zestedesavoir.com/privkey
+  cert: /var/lib/acme/live/tuxmania.net/fullchain
+  key: /var/lib/acme/live/tuxmania.net/privkey

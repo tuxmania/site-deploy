@@ -1,9 +1,9 @@
 appversion: dev
 env: beta
-http_host: beta.zestedesavoir.com
+http_host: beta.tuxmania.net
 certificate:
-  cert: /etc/letsencrypt/live/beta.zestedesavoir.com/fullchain.pem
-  key: /etc/letsencrypt/live/beta.zestedesavoir.com/privkey.pem
+  cert: /etc/letsencrypt/live/beta.tuxmania.net/fullchain.pem
+  key: /etc/letsencrypt/live/beta.tuxmania.net/privkey.pem
 very_top_banner:
   background_color: '#800'
   border_color: '#450000'

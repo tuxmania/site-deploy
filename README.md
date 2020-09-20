@@ -2,7 +2,7 @@
 
 Ce dépôt contient tous les fichiers nécessaire au déploiement d'un serveur de production pour Zeste de Savoir grâce à [Ansible](https://docs.ansible.com/ansible/latest/index.html). Vous trouverez ci-dessous toutes les informations pour prendre en main une installation de Zeste de Savoir sur un serveur de production.
 
-[Documentation du projet technique de Zeste de Savoir](https://docs.zestedesavoir.com)
+[Documentation du projet technique de Zeste de Savoir](https://docs.tuxmania.net)
 
 [Code source de Zeste de Savoir](https://github.com/zestedesavoir/zds-site)
 
@@ -12,8 +12,8 @@ Ce dépôt contient tous les fichiers nécessaire au déploiement d'un serveur d
 
 Nous avons actuellement deux serveurs :
 
-- le serveur de production (« la prod ») à l'adresse `zestedesavoir.com` ;
-- le serveur de préproduction (« la bêta ») à l'adresse `beta.zestedesavoir.com`.
+- le serveur de production (« la prod ») à l'adresse `tuxmania.net` ;
+- le serveur de préproduction (« la bêta ») à l'adresse `beta.tuxmania.net`.
 
 Ces deux serveurs doivent être identiques autant que possible pour pouvoir reproduire les bugs de la prod sur la bêta. Néanmoins, le système de sauvegarde de la base de données et des fichiers est mis en place uniquement sur le serveur de production.
 
@@ -188,47 +188,47 @@ propres à ZdS :
 
 ```
 [zds_db_performance]
-env.url https://zestedesavoir.com/munin/db_performance/
+env.url https://tuxmania.net/munin/db_performance/
 env.graph_category zds
 
 [zds_total_users]
-env.url https://zestedesavoir.com/munin/total_users/
+env.url https://tuxmania.net/munin/total_users/
 env.graph_category zds
 
 [zds_active_users]
-env.url https://zestedesavoir.com/munin/active_users/
+env.url https://tuxmania.net/munin/active_users/
 env.graph_category zds
 
 [zds_total_sessions]
-env.url https://zestedesavoir.com/munin/total_sessions/
+env.url https://tuxmania.net/munin/total_sessions/
 env.graph_category zds
 
 [zds_active_sessions]
-env.url https://zestedesavoir.com/munin/active_sessions/
+env.url https://tuxmania.net/munin/active_sessions/
 env.graph_category zds
 
 [zds_total_topics]
-env.url https://zestedesavoir.com/munin/total_topics/
+env.url https://tuxmania.net/munin/total_topics/
 env.graph_category zds
 
 [zds_total_posts]
-env.url https://zestedesavoir.com/munin/total_posts/
+env.url https://tuxmania.net/munin/total_posts/
 env.graph_category zds
 
 [zds_total_mps]
-env.url https://zestedesavoir.com/munin/total_mps/
+env.url https://tuxmania.net/munin/total_mps/
 env.graph_category zds
 
 [zds_total_tutorials]
-env.url https://zestedesavoir.com/munin/total_tutorials/
+env.url https://tuxmania.net/munin/total_tutorials/
 env.graph_category zds
 
 [zds_total_articles]
-env.url https://zestedesavoir.com/munin/total_articles/
+env.url https://tuxmania.net/munin/total_articles/
 env.graph_category zds
 
 [zds_total_tribunes]
-env.url https://zestedesavoir.com/munin/total_opinions/
+env.url https://tuxmania.net/munin/total_opinions/
 env.graph_category zds
 ```
 

@@ -1,9 +1,8 @@
 [production]
-zdsprod1.zestedesavoir.com
+tuxprod1.tuxmania.net
 
 [beta]
-scaleway.zestedesavoir.com
-
+tuxbeta.tuxmania.net
 
 [app:children]
 production

@@ -119,7 +119,7 @@ On utilise l'utilitaire `cron` *depuis le serveur de prod* pour envoyer les donn
 BASE=opt/sauvegarde
 
 echo "Synchronisation des sauvegardes de la base de donnée"
-rsync -azvr /var/backups/mysql/ root@scaleway.zestedesavoir.com:/$BASE/db
+rsync -azvr /var/backups/mysql/ root@scaleway.tuxmania.net:/$BASE/db
 ```
 
 **`donnees.sh` (sur le serveur de prod)**
@@ -130,7 +130,7 @@ rsync -azvr /var/backups/mysql/ root@scaleway.zestedesavoir.com:/$BASE/db
 # Script from https://borgbackup.readthedocs.io/en/stable/quickstart.html#automating-backups
 
 # Setting this, so the repo does not need to be given on the commandline:
-export BORG_REPO=ssh://root@scaleway.zestedesavoir.com/opt/sauvegarde/data
+export BORG_REPO=ssh://root@scaleway.tuxmania.net/opt/sauvegarde/data
 
 # See the section "Passphrase notes" for more infos.
 #export BORG_PASSPHRASE='XYZl0ngandsecurepa_55_phrasea&&123'
@@ -316,6 +316,6 @@ sudo rm -rI /opt/sauvegarde/db/20200509-0800.bck/
 
 Il y a déjà eu deux pertes de données dans l'histoire de Zeste de Savoir, avec à chaque fois un article explicatif :
 
-- [Retour sur une semaine compliquée pour Zeste de Savoir](https://zestedesavoir.com/articles/194/retour-sur-une-semaine-compliquee-pour-zeste-de-savoir/)
-- [Retour dans le passé pour ZdS :(](https://zestedesavoir.com/articles/1432/retour-dans-le-passe-pour-zds/)
+- [Retour sur une semaine compliquée pour Zeste de Savoir](https://tuxmania.net/articles/194/retour-sur-une-semaine-compliquee-pour-zeste-de-savoir/)
+- [Retour dans le passé pour ZdS :(](https://tuxmania.net/articles/1432/retour-dans-le-passe-pour-zds/)
 
