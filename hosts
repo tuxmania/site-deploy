@@ -1,9 +1,9 @@
-[production]
+[prod]
 tuxprod1.tuxmania.net
 
 [beta]
 tuxbeta.tuxmania.net
 
 [app:children]
-production
+prod
 beta
