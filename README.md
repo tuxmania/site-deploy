@@ -1,10 +1,10 @@
-# Zeste de Savoir sur un serveur de production
+# Tuxmania sur un serveur de production
 
-Ce dépôt contient tous les fichiers nécessaire au déploiement d'un serveur de production pour Zeste de Savoir grâce à [Ansible](https://docs.ansible.com/ansible/latest/index.html). Vous trouverez ci-dessous toutes les informations pour prendre en main une installation de Zeste de Savoir sur un serveur de production.
+Ce dépôt contient tous les fichiers nécessaires au déploiement d'un serveur de production pour Tuxmania grâce à [Ansible](https://docs.ansible.com/ansible/latest/index.html). Vous trouverez ci-dessous toutes les informations pour prendre en main une installation de Zeste de Savoir sur un serveur de production.
 
-[Documentation du projet technique de Zeste de Savoir](https://docs.tuxmania.net)
+[Documentation du projet technique de Tuxmania](https://docs.tuxmania.net)
 
-[Code source de Zeste de Savoir](https://github.com/zestedesavoir/zds-site)
+[Code source de Zeste de Savoir](https://github.com/tuxmania/site-infra)
 
 [Code source de zmarkdown](https://github.com/zestedesavoir/zmarkdown)
 
@@ -26,8 +26,8 @@ Ces deux serveurs doivent être identiques autant que possible pour pouvoir repr
 | Interface WSGI (entre le serveur web et Django)              | Gunicorn                          |
 | Base de donnée                                               | MariaDB                           |
 | Moteur de recherche                                          | ElasticSearch                     |
-| Outil de surveillance du système d'exploitation et des requêtes de Zeste de Savoir * | Munin                             |
-| Outil de surveillance des erreurs de Zeste de Savoir *       | Sentry                            |
+| Outil de surveillance du système d'exploitation et des requêtes de Tuxmania * | Munin                             |
+| Outil de surveillance des erreurs de Tuxmania *       | Sentry                            |
 | Outil pour les certificats TLS                               | acmetool (prod) et certbot (bêta) |
 
 \* Actuellement, les deux outils de surveillance sont installés sur un serveur à part du serveur de production. (Un serveur appartenant à [vhf] pour le Munin et un serveur appartenant à [Sandhose] pour le Sentry.)
@@ -51,7 +51,7 @@ Une explication détaillée est disponible dans le fichier `BACKUP.md` !
 
 [Installer Vagrant à partir de leur site web](https://www.vagrantup.com/downloads.html)
 
-Depuis une copie de `ansible-zestedesavoir` sur votre ordinateur :
+Depuis une copie de `site-deploy` sur votre ordinateur :
 
 Commande | Explication
 ---|---
@@ -68,13 +68,13 @@ Vous pouvez accéder au site web sur `localhost:8080` (HTTP) ou `localhost:8443`
 
 [Installer Ansible à partir de leur site web](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 
-- `ENV` = "beta" ou "production"
+- `ENV` = "beta" ou "prod"
 - `TAG` = "bootstrap" (pour une installation complète) ou "upgrade" (pour une mise à jour)
 - `appversion` = un tag (ex, "v27.1") ou une branche (ex, "release_v28") ou une PR (ex, "pull/5158/head" pour la PR 5158)
 
-Depuis une copie de `ansible-zestedesavoir` sur votre ordinateur :
+Depuis une copie de `site-deploy` sur votre ordinateur :
 
-1. Mettre à jour `ansible-zestedesavoir` avec `git fetch`
+1. Mettre à jour `site-deploy` avec `git fetch`
 2. Vérifier que vous êtes sur la bonne branche (`origin/master` la plupart du temps)
 3. Modifier `appversion` dans `group_vars/ENV/vars.yml` avec la version de `zds-site` que vous voulez déployer
 4. Créer un commit des modifications avec `git commit` et les envoyer sur Github avec `git push`
@@ -89,7 +89,7 @@ Depuis une copie de `ansible-zestedesavoir` sur votre ordinateur :
 
 ### Changements visuels temporaires
 
-Plusieurs changements visuels sont activables et désactivables en modifiant la configuration dans `group_vars/beta/vars.yml` ou `group_vars/production/vars.yml` :
+Plusieurs changements visuels sont activables et désactivables en modifiant la configuration dans `group_vars/beta/vars.yml` ou `group_vars/prod/vars.yml` :
 
 ```yaml
 visual_changes:
