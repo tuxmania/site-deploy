@@ -45,6 +45,3 @@ fonts:
   - name: SourceCodePro
     slug: source-code-pro
     url: "https://raw.githubusercontent.com/adobe-fonts/source-code-pro/release"
-  - name: SourceSansPro
-    slug: source-sans-pro
-    url: "https://raw.githubusercontent.com/adobe-fonts/source-sans-pro/release"
