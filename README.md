@@ -37,11 +37,11 @@ Ces deux serveurs doivent être identiques autant que possible pour pouvoir repr
 | Paramètre                                                    | Valeur                                     |
 | ------------------------------------------------------------ | ------------------------------------------ |
 | Utilisateur et groupe local                                  | `zds` et `zds`                             |
-| Dossier dédié à `zds-site`                                   | `/opt/zds`                                 |
+| Dossier dédié à `site-deploy`                                | `/opt/tux`                                 |
 | Dossier dédié à `zmarkdown`                                  | `/opt/zmd`                                 |
 | Données importantes (contenus, galeries...) à sauvegarder    | `/opt/zds/data`                            |
-| Base de données à sauvegarder (et ses sauvegardes régulières) | `/var/lib/mysql` (et `/var/backups/mysql`) |
-| Fichiers de journalisation                                   | `/var/log/zds`                             |
+| Base de données à sauvegarder (et ses sauvegardes régulières)| `/var/lib/mysql` (et `/var/backups/mysql`) |
+| Fichiers de journalisation                                   | `/var/log/tux`                             |
 
 ### Sauvegardes
 
