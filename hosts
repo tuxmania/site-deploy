@@ -1,8 +1,8 @@
 [prod]
-tuxprod1.tuxmania.net
+tuxprod1.tuxmania.net ansible_user=ansible
 
 [beta]
-tuxbeta.tuxmania.net
+tuxbeta.tuxmania.net ansible_user=ansible
 
 [app:children]
 prod
