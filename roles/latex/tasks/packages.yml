@@ -18,6 +18,8 @@
 - name: check ansible state
   slurp: src="{{ workdir }}/texmf/ansible-state"
   register: installed_packages
+  tags:
+    - bootstrap
 
 - name: install packages
   become: true
