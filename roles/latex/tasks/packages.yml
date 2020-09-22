@@ -9,14 +9,14 @@
 
 - name: create ansible state if non-existant
   file:
-    path: /opt/zds/texmf/ansible-state
+    path: /opt/{{ workdir }}/texmf/ansible-state
     state: touch
     mode: 0666
   tags:
     - bootstrap
 
 - name: check ansible state
-  slurp: src=/opt/zds/texmf/ansible-state
+  slurp: src=/opt/{{ workdir }}/texmf/ansible-state
   register: installed_packages
 
 - name: install packages
@@ -39,7 +39,7 @@
 
 - name: create tabu directory
   file:
-    path: /opt/zds/texmf/tex/latex/tabu/
+    path: /opt/{{ workdir }}/texmf/tex/latex/tabu/
     state: directory
   tags:
     - bootstrap
@@ -47,6 +47,6 @@
 - name: install tabu package
   get_url:
     url: https://raw.githubusercontent.com/tabu-issues-for-future-maintainer/tabu/master/tabu.sty
-    dest: /opt/zds/texmf/tex/latex/tabu/tabu.sty
+    dest: /opt/{{ workdir }}/texmf/tex/latex/tabu/tabu.sty
   tags:
     - bootstrap
