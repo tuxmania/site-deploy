@@ -39,7 +39,7 @@
 
 - name: create tabu directory
   file:
-    path: "{{ workdir }}/texmf/tex/latex/tabu/""
+    path: "{{ workdir }}/texmf/tex/latex/tabu/"
     state: directory
   tags:
     - bootstrap
