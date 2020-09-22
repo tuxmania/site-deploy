@@ -20,7 +20,7 @@
 - name: clone the template
   git:
     repo: "https://github.com/zestedesavoir/latex-template/"
-    dest: /opt/zds/texmf/tex/generic/latex-template
+    dest: /opt/{{ workdir }}/texmf/tex/generic/latex-template
   notify: run texhash
   tags:
     - bootstrap
