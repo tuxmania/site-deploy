@@ -1,9 +1,3 @@
-- include_role:
-    name: common
-    tasks_from: nodejs
-  tags:
-    - bootstrap
-
 - name: install zmarkdown
   become: true
   become_user: zds
