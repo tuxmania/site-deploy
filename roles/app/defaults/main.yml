@@ -1,5 +1,5 @@
 appuser: zds
-apprepo: "https://github.com/tuxmania/site-infra.git"
+apprepo: "https://github.com/tuxmania/site-app.git"
 env: dev
 secrets: []
 google_analytics_api:
